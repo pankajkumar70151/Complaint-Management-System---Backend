@@ -97,6 +97,15 @@ class ComplaintService:
         paged_complaints = complaints[start:end]
 
         return paged_complaints, total
+    
+    async def get_all_complaints(self) -> Tuple[List[ComplaintInDB], int]:
+        complaints_data = await self.store.read_all()
+        complaints = [ComplaintInDB(**c) for c in complaints_data]
+
+        total = len(complaints)
+ 
+
+        return complaints, total
 
     async def get_by_id(self, complaint_id: str) -> ComplaintInDB:
         complaints_data = await self.store.read_all()

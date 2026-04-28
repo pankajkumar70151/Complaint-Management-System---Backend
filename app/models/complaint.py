@@ -54,3 +54,7 @@ class PaginatedComplaints(BaseModel):
     page: int = Field(..., example=1)
     size: int = Field(..., example=10)
     items: List[ComplaintInDB]
+
+class AllComplaints(BaseModel):
+    total: int = Field(..., example=42) 
+    items: List[ComplaintInDB]

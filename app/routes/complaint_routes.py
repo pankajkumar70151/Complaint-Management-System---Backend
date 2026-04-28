@@ -1,8 +1,9 @@
 from typing import Optional
 
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, Query, status
 
 from app.models.complaint import (
+    AllComplaints,
     ComplaintCreate,
     ComplaintInDB,
     ComplaintStatus,
@@ -53,7 +54,16 @@ async def get_complaints(
         order=order,
     )
     return PaginatedComplaints(total=total, page=page, size=size, items=items)
-
+    
+@router.get(
+    "/complaints/all",
+    response_model=AllComplaints,
+    summary="Get all complaints",
+    description="Retrieve all complaints",
+)
+async def get_all_complaints():
+    items, total = await service.get_all_complaints()
+    return AllComplaints(total=total, items=items)
 
 @router.get(
     "/complaints/{complaint_id}",
