@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Damaged screen on delivery",
+    "description": "The laptop arrived with a cracked screen. I need a replacement.",
+    "user_name": "John Doe",
+    "id": "f0afc173-922f-4f16-bd83-163e3b19af5b",
+    "status": "In Progress",
+    "created_at": "2026-04-28T12:44:39.188915",
+    "updated_at": "2026-04-28T12:45:02.602558"
+  }
+]
