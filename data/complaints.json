@@ -7,5 +7,14 @@
     "status": "In Progress",
     "created_at": "2026-04-28T12:44:39.188915",
     "updated_at": "2026-04-28T12:45:02.602558"
+  },
+  {
+    "title": "Damaged screen on delivery",
+    "description": "The laptop arrived with a cracked screen. I need a replacement.",
+    "user_name": "John Doe",
+    "id": "3662733d-1550-415d-af65-8bc3e851813b",
+    "status": "Open",
+    "created_at": "2026-04-28T13:27:19.367866",
+    "updated_at": "2026-04-28T13:27:19.367866"
   }
 ]
